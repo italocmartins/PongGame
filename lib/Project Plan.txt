@@ -1,0 +1,48 @@
+Pong Plan:
+Requirement objects and game mecanics:
+* Should have a field where the ball should roll (done)
+* Should have a singular sphere ball which will travel through the table (done)
+* Should have two square cushions on each side of the field 
+* Should have two Rackets to represent the players
+* Should provide an option for single or two players
+
+About the Field object:
+1. Should be green (done)
+2. Should show a white (maybe dotted) line separating each half of the field 
+3. The length should be twice the width
+
+About the Ball object:
+1. Should be positioned initially at a random point in the middle of the field
+2. Should have an initial speed, which will slightly increase when the ball hits the cushions
+3. The ball should bounce in case it hits the sides of the field
+4. Make sure that the ball stays aways inside the field 
+
+About the Cushion object:
+1. It should have an slightly darker color compared to the field
+2. Should be positioned on the extreme edges on the sides of the field
+3. When the Ball hits one of the Cushions its speed should increase
+4. Optionally test different solutions for collisions physics
+
+About the Rackets object:
+1. They're movement should be defined by player button events
+2. One red Racket for player 1 and a Blue Racket for player 2
+3. When the Ball hits one of the Rackets its' speed should increase
+4. Optionally test different solutions for collisions physics
+
+
+Game Modes:
+Single Player -> Only one Racket is created and a Cushion is positioned where player 2 should be
+Double Player -> Two Rackets are created and a new canvas with a new Camera and a new renderer should be created for player 2.
+
+Project Plan:
+1. Create the Field object following the specifications
+2. Create the Cushion objects and bind them to the field.
+3. Cushions should have a function to identify their position and give the other objects some feedback in case of collisions
+4. Create the Sphere Object and bind it to the field
+5. Test positioning the Sphere in multiple random places at the center of the field
+6. Test bouncing the ball between the two sides of the field in order to verify the cushions
+7. Add the Racket object and give it a simillar function as the cushions for bouncing
+8. Add to the Racket button events in order to controll it
+9. Add a second Racket and test it with one canvas
+10. Add a new canvas which should share the game scoope
+11. Test all functionalities of the game based on the requirements
